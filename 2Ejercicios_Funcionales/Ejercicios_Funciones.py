@@ -56,13 +56,67 @@ print(num)
 #  Restar3(int, int):
 #  Restar4():
 
+def restar1(a, b) -> int:
+    return a - b
+
+def restar2()->int:
+    a = int(input("Ingresar primer número: "))
+    b = int(input("Ingresar segundo número: "))
+    return a - b
+
+def restar3(a, b):
+    print(a - b)
+
+def restar4():
+    a = int(input("Ingresar primer número: "))
+    b = int(input("Ingresar segundo número: "))
+
 # Ejercicio 3-6: Realizar un programa que: asigne a la variable numero1 un valor--------------------------------#
 # solicitado al usuario, valide el mismo entre 10 y 100, realice un descuento del 5% a
 # dicho valor a través de una función llamada realizarDescuento(). Mostrar el resultado
 # por pantalla. Atención: pueden reutilizarse funciones ya creadas.
+def RealizarDescuento(numero):
+    Descuento = numero * 0.05 
+    resultado = numero - Descuento
+    return resultado
+'''
+num1 = int(input("Ingresar número (10-100): "))
+while num1 < 10 or num1 > 100:
+    num1 = int(input("Error.número entre 10-100. Reingresar"))
 
+final = RealizarDescuento(num1)
+
+print(f"Resultado descuento: {final}")
+'''
 # Ejercicio 3-7: Realizar un programa que: asigne a las variables numero1 y numero2--------------------------------#
 # los valores solicitados al usuario, valide los mismos entre 10 y 100, asigne a la
 # variable operacion el valor solicitado al usuario: 's'-sumar, 'r'-restar (validar),realice
 # la operación de dichos valores a través de una función. Mostrar el resultado por
 # pantalla.
+
+def validarnum(msg):
+    numero = int(input(msg))
+    while numero < 10 or numero > 100:
+        numero = int(input("Error.Número entre 10-100. Reingresar: "))
+    return numero
+
+
+def operaciones(n1, n2, operacion):
+    if operacion == 's':
+        return n1 + n2
+    elif operacion == 'r':
+        return n1 - n2
+    else:
+        return None
+
+
+num1 = validarnum("Ingresar número 1: ")
+num2 = validarnum("Ingresar número 2: ")
+
+operacion = input("ingrese operación('s' suma, 'r' resta): ").lower().strip()
+while operacion not in ["s", "r"]:
+    operacion = input("Error.Operación inválida. Reingresar: ").lower().strip()
+
+resultado = operaciones(num1, num2, operacion)
+
+print(f"Resultado: {resultado}")

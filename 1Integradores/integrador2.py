@@ -1,7 +1,3 @@
-from colorama import Fore,Style,init
-
-init()
-
 # UTN Technologies, una reconocida software factory se encuentra en la búsqueda
 # de ideas para su próximo desarrollo en Python, que promete revolucionar el
 # mercado.

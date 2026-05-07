@@ -1,5 +1,3 @@
-import unicodedata
-
 from colorama import Fore, Style, init
 
 init()

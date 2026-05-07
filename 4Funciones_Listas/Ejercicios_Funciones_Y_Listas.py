@@ -1,8 +1,7 @@
-import unicodedata
-
 # Ejercicio 1: Desarrollar una función que pida 10 nombres de manera secuencial, los
 # guarde en una lista y la retorne. El programa principal debe invocar a la función y
 # mostrar por pantalla el retorno.
+
 def nombres_s():
     
     lista = list()

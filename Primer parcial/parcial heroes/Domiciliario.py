@@ -14,13 +14,13 @@ while flag == True:
 
     if op == 1:
         for i in lista_heroes:
-            print(i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9],"\n","----")
+            print(i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9],"\n","----") #se puede remplazar por una función
 
     elif op == 2:
-        nombre = input("Ingrese el nombre del héroe: ")
+        nombre = input("Ingrese el nombre del héroe: ").title().strip()
         nombre = funciones.validacion_enblanco(nombre)
 
-        identidad = input("Ingrese la identidad del héroe: ")
+        identidad = input("Ingrese la identidad del héroe: ").title().strip()
         identidad = funciones.validacion_enblanco(identidad)
         
         distribuidora = input("Ingrese de que distribuidora es su héroe(Marvel Comics/DC Comics): ").lower().strip()
@@ -56,9 +56,9 @@ while flag == True:
         print("Agregado Exitosamente")
 
     elif op == 3:
-        flag = True
-        while flag == True:
-            nombre = input("Ingrese el nombre del héroe que quiere eliminar: ").strip().title()
+        flag2 = True
+        while flag2 == True:
+            nombre = input("Ingrese el nombre del héroe que quiere eliminar: ").title().strip()
             nombre = funciones.validacion_enblanco(nombre)
 
             find = False
@@ -71,7 +71,7 @@ while flag == True:
             
             if find == True:
                 print("Borrado Exitosamente")
-                flag = False
+                flag2 = False
             else:
                 print("Héroe no Encontrado")
 
@@ -84,7 +84,7 @@ while flag == True:
                     lista_heroes[i] = lista_heroes[j]
                     lista_heroes[j] = aux
         for x in lista_heroes:
-            print(x[0], x[1], x[2], x[3], x[4], x[5], x[6], x[7], x[8], x[9],"\n","----")
+            print(x,"\n","----")
 
     elif op == 5:
         alturas = []
@@ -94,7 +94,7 @@ while flag == True:
         
         for x in lista_heroes:
             if x[3] == maximo:
-                print(x[0], x[1], x[2], x[3], x[4], x[5], x[6], x[7], x[8], x[9],"\n","----")
+                print(x,"\n","----")
 
     elif op == 6:
         fuerza_lista = []
@@ -104,7 +104,7 @@ while flag == True:
         
         for x in lista_heroes:
             if x[8] == maximo:
-                print(x[0], x[1], x[2], x[3], x[4], x[5], x[6], x[7], x[8], x[9],"\n","----")
+                print(x,"\n","----")
 
     elif op == 7:
         peso_lista = []
@@ -114,7 +114,7 @@ while flag == True:
         
         for x in lista_heroes:
             if -x[4] == maximo:
-                print(x[0], x[1], x[2], x[3], x[4], x[5], x[6], x[7], x[8], x[9],"\n","----")
+                print(x,"\n","----")
 
     elif op == 8:
         flag = False
